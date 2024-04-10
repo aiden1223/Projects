@@ -1,0 +1,405 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Angular</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+
+<body class="single is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">艾登Blog</a></h1>
+			<nav class="links">
+				<ul>
+					<li><a href="html_css.html">HTML/CSS</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+					<li><a href="rwd.html">RWD</a></li>
+					<li><a href="jQuery.html">jQuery</a></li>
+					<li><a href="bootstrap.html">Bootstrap</a></li>
+					<li><a href="git.html">git</a></li>
+					<li><a href="angular.html">angular</a></li>
+				</ul>
+			</nav>
+			<nav class="main">
+				<ul>
+					<li class="search">
+						<a class="fa-search" href="#search">Search</a>
+						<form id="search" method="get" action="#">
+							<input type="text" name="query" placeholder="Search" />
+						</form>
+					</li>
+					<li class="menu">
+						<a class="fa-bars" href="#menu">Menu</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<section id="menu">
+
+			<!-- Search -->
+			<section>
+				<form class="search" method="get" action="#">
+					<input type="text" name="query" placeholder="Search" />
+				</form>
+			</section>
+
+			<!-- Links -->
+			<section>
+				<ul class="links">
+					<li>
+						<a href="html_css.html">
+							<h3>HTML/CSS</h3>
+						</a>
+					</li>
+					<li>
+						<a href="javascript.html">
+							<h3>JavaScript</h3>
+						</a>
+					</li>
+					<li>
+						<a href="rwd.html">
+							<h3>RWD</h3>
+						</a>
+					</li>
+					<li>
+						<a href="jQuery.html">
+							<h3>jQuery</h3>
+						</a>
+					</li>
+					<li>
+						<a href="bootstrap.html">
+							<h3>Bootstrap</h3>
+						</a>
+					</li>
+					<li>
+						<a href="git.html">
+							<h3>Git</h3>
+						</a>
+					</li>
+					<li>
+						<a href="angular.html">
+							<h3>angular</h3>
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Actions -->
+			<!-- <section>
+				<ul class="actions stacked">
+					<li><a href="#" class="button large fit">Log In</a></li>
+				</ul>
+			</section> -->
+
+		</section>
+
+		<!-- Main -->
+		<div id="main">
+			<!-- Post -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a href="#">Angular</a></h2>
+						<p>Angular隨手記</p>
+					</div>
+					<div class="meta">
+						<time class="published" datetime="2023-11-01">November 1, 2023</time>
+						<a href="#" class="author"><span class="name">Aiden</span><img src="images/head.jpg"
+								alt="" /></a>
+					</div>
+				</header>
+				<ul>
+					<li><a href="https://www.udemy.com/course/angular-zero/">Angular專案建置：</a></li>
+					<ol>
+						<li>
+							新增專案資料夾 ex. demoAngular
+						</li>
+						<li>
+							開啟CMD後輸入ng new demoAngular (資料夾名稱)
+						</li>
+						<li>
+							輸入cd demoAnuglar進入資料夾後，輸入npm start 就會將專案Run起來 (Ctrl + C-中斷)
+						</li>
+						<li>輸入code . 即可開啟VSCode</li>
+					</ol>
+					<li>Component</li>
+					<ol>
+						<li>
+							新增Component：ng generate component page1(名稱) (縮寫：ng g c page1)
+						</li>
+						<li>
+							新增後要手動在app.component.ts內加入：<br>
+							<img src="images/angular/create_component.png" /><br>
+							才可以在app.component.html內加上<code>< app-page1>< /app-page1></code>
+						</li>
+					</ol>
+					<li>資料繫結</li>
+					<ol>
+						<li>
+							內嵌繫結：
+							<ul>
+								<li>用兩個{{}}將參數括起來：{{property}}</li>
+								<pre>
+									<code>
+HTML：
+< h1>hello, {{ myname }}</ h1>
+
+TS：
+myname = 'Aiden';
+									</code>
+								</pre>
+							</ul>
+						</li>
+						<li>
+							屬性繫結：
+							<ul>
+								<li>將HTML標籤內屬性用[]括起來後給予參數：[property]=’statement’</li>
+								<pre>
+									<code>
+HTML：
+< a [href]="url">Google首頁</ a>
+
+TS：
+url = 'https://www.google.com/'; 
+									</code>
+								</pre>
+								<li>若為HTML5 data-*屬性，則要在前面加上attr.</li>
+								<pre>
+									<code>
+HTML：
+< div id="example" [attr.data-name]="myname"></ div>
+
+TS：
+myname = '這是屬性繫結'; 
+									</code>
+								</pre>
+							</ul>
+						</li>
+						<li>
+							事件繫結 (顯示所有可用的方法：Ctrl + 空白)
+							<ul>
+								<li>將事件用()括起來後給予function：(event)='someMethod($event)'</li>
+								<pre>
+									<code>
+HTML：
+< p (click)="changeText()">點擊後變更myname</ p>
+
+TS：
+changeText(){
+	this.myname = '(事件繫結)';
+};
+									</code>
+								</pre>
+								<li>使用DOM的Event，利用DOM物件的Poperty進行判斷：</li>
+								<pre>
+									<code>
+HTML：
+< p (click)="changeText($event)">點擊後變更myname</ p>
+
+TS：
+changeText($event: any){
+	console.log($event); // 確認是什麼Event (MouseEvent)
+	// 將any改為MouseEvent後，就可以享用到intellisense的功能，輸入 . 後便會自動帶出可用功能
+	if ($event.altKey) this.myname = '按下Alt後改變(事件繫結)';
+};
+									</code>
+								</pre>
+							</ul>
+						</li>
+						<li>
+							雙向繫結 (屬性和事件)
+							<ul>
+								<li>[(ngModel)]='property'</li>
+								<pre>
+									<code>
+HTML：
+< input type="text" placeholder="請任意輸入" [(ngModel)]="word">< br>
+< p>您輸入的字為"{{word}}" 共有{{word.length}}個字</ p>
+
+TS：
+import { FormsModule } from '@angular/forms'; // 引入 FormsModule
+
+@Component({
+	...
+	imports: [RouterOutlet, Page1Component, FormsModule], // 添加FormsModule
+	...
+  })
+
+  export class AppComponent {
+	...
+	word = ''; // 先宣告word參數
+	// input輸入後便雙向繫結回TS，再透過內嵌繫結回HTML上顯示
+  }
+									</code>
+								</pre>
+							</ul>
+						</li>
+					</ol>
+					<li>範本參考變數 (在HTML自訂變數名稱ex. tKeyword)</li>
+					<ol>
+						<li>基本操作方式</li>
+						<pre>
+							<code>
+HTML：
+< input type="text" placeholder="請任意輸入" #tKeyword>< br>
+< p>您輸入的字為"{{tKeyword.value}}" 共有{{tKeyword.value.length}}個字</ p>
+							</code>
+						</pre>
+						<li>延伸應用: 可將整個A Component設為範本變數，至B Component對A Component進行操作</li>
+						<pre>
+							<code>
+HTML：
+< app-header #tHeader></ app-header>
+< p (click)="tHeader.title=tKeyword.value">Header:您輸入的字為"{{tKeyword.value}}" 共有{{tKeyword.value.length}}個字</ p>
+							</code>
+						</pre>
+					</ol>
+					<li>構造函數constructor (主要用於初始化工作)</li>
+					<ol>
+						<pre>
+							<code>
+TS：
+constructor() {
+    setTimeout(() => {
+      this.title = '兩秒後顯示內嵌繫結'
+    }, 2000);
+  };
+							</code>
+						</pre>
+					</ol>
+					<li>資料繫結</li>
+					<ol>
+						<li>
+							元件型指令
+							<ul>
+								<li>預設「元件」就是一個含有樣板的指令(最常見)</li>
+								<pre>
+									<code>
+									</code>
+								</pre>
+							</ul>
+						</li>
+						<li>
+							屬性型指令
+							<ul>
+								<li>這種指令會修改元素外的外觀或行為</li>
+								<li>例如內建的 NgStyle 或 NgClass 指令就可讓你自由變更樣式</li>
+								<pre>－NgStyle
+									<code>
+TS：
+import { CommonModule } from '@angular/common';
+@Component({
+	．．．
+	imports: [RouterOutlet, Page1Component, FormsModule, HeaderComponent, CommonModule], // 添加CommonModule
+	...
+})
+
+counter = 0;
+
+changeTitle($event: MouseEvent) {
+    ...
+    this.counter++;
+}
+
+getStyle() {
+	return { 'font-size': (12 + this.counter) + 'px' }
+}
+
+HTML：
+< p (click)="changeTitle($event)" [ngStyle]="getStyle()">點此換標題且放大字體，共點擊了{{counter}}次</ p>
+
+// 或是在style.加上想要動態的樣式ex.font-size
+< p [style.font-size]="(12+counter)+'px'">動態樣式顯示{{counter}}</ p>
+									</code>
+								</pre>
+								<pre>－NgClass：[ngClass] = "{ClassName : bool}"
+									<code>
+HTML：
+// 透過布林值判斷要不要套用這個Class
+< p [ngClass]="{'hiehlight': counter% 2==2}">ngClass</p>
+									</code>
+								</pre>
+							</ul>
+						</li>
+						<li>
+							結構型指令 (Structure Directives)
+							<ul>
+								<li>這種指令會透過新增和刪除DOM元素來改變DOM結構</li>
+								<li>例如內建的 Ngif / NgFor / NgSwitch 就可以用來控制DOM結構</li>
+								<pre>
+									<code>
+									</code>
+								</pre>
+							</ul>
+						</li>
+					</ol>
+					<li>Angular相關指令</li>
+					<ol>
+						<li>查看所有可新增的元件：ng generate -h</li>
+						<li>建置專案：ng build (會產生dist資料夾，未來需丟到IIS內)(ng build -prod，會將js壓縮)</li>
+						<li>自動換行：Alt + Z</li>
+						<li>確認版本：ng -v</li>
+						<li>更新Angular版本：ng update</li>
+						<li>確認Angular CLI版本：<br>
+							npm list -g -depth=0<br>
+							npm outdated -g (沒東西就是最新版本)
+						</li>
+						<li>安裝Angular CLI：npm install -g @angular/cli</li>
+					</ol>
+					<li>Note</li>
+					<ol>
+						<li>F1 -> reload，重新載入視窗</li>
+						<li>Encapsulation: ViewEncapsulation.None // 不封裝A Component的CSS樣式，渲染到全專案，加在A的ts的@Component內</li>
+					</ol>
+				</ul>
+				<footer>
+					<ul class="stats">
+						<li><a href="#">Angular</a></li>
+						<li><a href="#" class="icon solid fa-heart">28</a></li>
+						<li><a href="#" class="icon solid fa-comment">128</a></li>
+					</ul>
+				</footer>
+			</article>
+
+		</div>
+
+		<!-- Footer -->
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+				<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<p class="copyright">&copy; Untitled. Design：<a href="http://html5up.net">HTML5 UP</a>. Images：<a
+					href="http://unsplash.com">Unsplash</a>.</p>
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

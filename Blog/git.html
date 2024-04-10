@@ -1,0 +1,265 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>Git</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="single is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">艾登Blog</a></h1>
+			<nav class="links">
+				<ul>
+					<li><a href="html_css.html">HTML/CSS</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+					<li><a href="rwd.html">RWD</a></li>
+					<li><a href="jQuery.html">jQuery</a></li>
+					<li><a href="bootstrap.html">Bootstrap</a></li>
+					<li><a href="git.html">Git</a></li>
+					<li><a href="angular.html">angular</a></li>
+				</ul>
+			</nav>
+			<nav class="main">
+				<ul>
+					<li class="search">
+						<a class="fa-search" href="#search">Search</a>
+						<form id="search" method="get" action="#">
+							<input type="text" name="query" placeholder="Search" />
+						</form>
+					</li>
+					<li class="menu">
+						<a class="fa-bars" href="#menu">Menu</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<section id="menu">
+
+			<!-- Search -->
+			<section>
+				<form class="search" method="get" action="#">
+					<input type="text" name="query" placeholder="Search" />
+				</form>
+			</section>
+
+			<!-- Links -->
+			<section>
+				<ul class="links">
+					<li>
+						<a href="html_css.html">
+							<h3>HTML/CSS</h3>
+						</a>
+					</li>
+					<li>
+						<a href="javascript.html">
+							<h3>JavaScript</h3>
+						</a>
+					</li>
+					<li>
+						<a href="rwd.html">
+							<h3>RWD</h3>
+						</a>
+					</li>
+					<li>
+						<a href="jQuery.html">
+							<h3>jQuery</h3>
+						</a>
+					</li>
+					<li>
+						<a href="bootstrap.html">
+							<h3>Bootstrap</h3>
+						</a>
+					</li>
+					<li>
+						<a href="git.html">
+							<h3>Git</h3>
+						</a>
+					</li>
+					<li>
+						<a href="angular.html">
+							<h3>angular</h3>
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Actions -->
+			<!-- <section>
+				<ul class="actions stacked">
+					<li><a href="#" class="button large fit">Log In</a></li>
+				</ul>
+			</section> -->
+
+		</section>
+
+		<!-- Main -->
+		<div id="main">
+
+			<!-- Post -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a href="#">Git</a></h2>
+						<p>Git 與 Github隨手記</p>
+					</div>
+					<div class="meta">
+						<time class="published" datetime="2023-11-01">November 1, 2023</time>
+						<a href="#" class="author"><span class="name">Aiden</span><img src="images/head.jpg" alt="" /></a>
+					</div>
+				</header>
+				<span>Git指令：</span>
+				<ul>
+					<li>移動路徑：cd 路徑 (ex.cd /c) 或是cd +直接拖曳資料夾至Git Bash即可獲得路徑</li>
+					<li>回上一層：cd ..</li>
+					<li>顯示當前資料夾內列表：ls</li>
+					<li>開新資料夾：mkdir 資料夾名稱</li>
+					<li>開新檔案：touch 檔案名稱 (ex.touch style.css)</li>
+				</ul>
+				<span>Git環境設定：</span>
+				<ul>
+					<li>查詢版本：git version</li>
+					<li>查詢設定列表：git config --list</li>
+					<li>輸入姓名：git config --global user.name "aiden"</li>
+					<li>輸入email：git config --global user.email "aiden@gmail.com"</li>
+				</ul>
+				<span>版控步驟-維護：</span>
+				<ol>
+					<li>cd至前次連結過的專案資料夾</li>
+					<li>增加全部檔案進入索引：git add .(.表示全部)</li>
+					<li>將索引提交到數據庫：git commit -m "修改註記"</li>
+					<li>將Git commit完的內容上傳到GitHub：git push</li>
+				</ol>
+				<span>版控步驟-新建：</span>
+				<ol>
+					<li>cd至欲上傳GitHub的專案資料夾</li>
+					<li>在本地資料夾新增數據庫：git init (出現master代表有連結到Local Repository)</li>
+					<li>增加全部檔案進入索引：git add .(.表示全部)</li>
+					<li>將索引提交到數據庫：git commit -m "修改註記"</li>
+					<li>至Github先創建一個新的Repositories，取得"HTTPS網址"</li>
+					<li>連線到遠端數據庫：git remote add origin(遠端數據庫) "HTTPS網址"</li>
+					<li>將當前分支(master)的更改推送到遠端並建立上游關聯：git push --set-upstream origin(遠端數據庫) 分支名稱(例如main/master)</li>
+					<li>後續要將異動完的內容上傳到GitHub：git push</li>
+				</ol>
+				<span>忽略檔案(指定某些檔案不進行版控)：</span>
+				<ul>
+					<li>產生文件：touch .gitignore</li>
+					<li>開啟.gitignore.txt 記事本，在裡面輸入欲忽略的文件(ex.index.html、*.html、css/)</li>
+				</ul>
+				<span>Git分支</span>
+				<ul>
+					<li>瀏覽目前處在分支：git branch</li>
+					<li>查看其他commit紀錄的程式：git checkout 前四碼(git log取得)</li>
+					<li>回到最新commit紀錄的程式：git checkout master</li>
+					<li>創建新分支：git branch 分支名稱</li>
+					<li>新分支若要push上Github：git push --set-upstream origin(遠端數據庫) 新分支名稱</li>
+					<li>切換分支：git checkout 分支名稱</li>
+					<li>合併分支：git merge 被合併分支名稱 (要先切回主要分支)</li>
+				</ul>
+				<span>Git標籤</span>
+				<ul>
+					<li>建立tag前要先進行commit的動作</li>
+					<li>建立標籤：git tag v1(標籤名稱)</li>
+					<li>建立標籤(含備註)：git tag -am "備註" v1</li>
+					<li>查詢標籤：git tag</li>
+					<li>查詢詳細標籤：git tag -n</li>
+					<li>切換標籤：git checkout v1</li>
+					<li>刪除標籤：git tag -d v1</li>
+				</ul>
+				<span>Git暫存</span>
+				<ul>
+					<li>建立暫存：git stash</li>
+					<li>查詢暫存：git stash list</li>
+					<li>還原暫存：git stash pop</li>
+					<li>清除最新暫存：git stash drop</li>
+					<li>清除全部暫存：git stash clear</li>
+					<li>暫存可以跨分支使用</li>
+				</ul>
+				<span>GitHub相關</span>
+				<ul>
+					<li>查詢遠端數據庫：git remote</li>
+					<li>修改遠端數據庫名稱：git remote 原名稱 新名稱</li>
+					<li>下載遠端數據庫：git pull</li>
+					<li>建立遠端數據庫的分支(用意是在pull前先查看)：git fetch origin(遠端數據庫) 遠端分支名稱 (此時分支會多一個叫 FETCH_HEAD 的分支)</li>
+					<li>查看欲pull的分支：git checkout FETCH_HEAD</li>
+				</ul>
+				<span>申請GitHub個人token</span>
+				<ol>
+					<li>點擊GitHub頭像選擇Settings</li>
+					<li>在左邊選單點擊Developer settings</li>
+					<li>點擊Personal access tokens->Tokens(classic)->Generate new token</li>
+					<li>點擊Generate new token(classic)</li>
+					<li>輸入名稱，設定期限，設定權限(若不確定可全勾)->產生token</li>
+				</ol>
+				<div id="gitcode">
+					<span>指令大全：</span>
+					<ul>
+						<li>複製遠端數據庫：git clone 遠端數據庫網址</li>
+						<li>增加檔案進入索引：git add 檔案名稱</li>
+						<li>單一檔案取消索引：git reset HEAD 檔案名稱</li>
+						<li>全部檔案取消索引：git reset HEAD</li>
+						<li>還原檔案(到上次commit版本)：git checkout 檔案名稱</li>
+						<li>還原目錄(到上次commit版本)：git reset --hard</li>
+						<li>恢復單一檔案到最新 commit 狀態：git checkout 檔案名稱</li>
+						<li>還原工作目錄與索引，會跟最後一次 commit 保持一樣：git reset --hard</li>
+						<li>刪除最近一次 commit：git reset --hard HEAD^</li>
+						<li>刪除錯了還原：git reset --hard ORIG_HEAD</li>
+						<li>刪除最近一次 commit，但保留異動內容：git reset --soft HEAD^</li>
+						<li>commit 後想要補內容進去時：git commit --amend</li>
+						<li>查詢狀態：git status</li>
+						<li>顯示歷史紀錄：git log</li>
+						<li>離開歷史紀錄：q</li>
+						<li>重命名 Git 存儲庫中的分支：git branch -m 'old-branch-name' 'new-branch-name'</li>
+						<li>如果git push沒有成功：Ctrl + C（Windows 或 Linux）或 Cmd + C（Mac）來中斷 git push 的執行。</li>
+						<li>刪除Repository：進入該Repository->Settings->General最下面Danger Zone->Delete this repository</li>
+						<li>Git bash貼上方式：Ctrl+Shift+Ins</li>
+					</ul>
+				</div>
+				<footer>
+					<ul class="stats">
+						<li><a href="#">General</a></li>
+						<li><a href="#" class="icon solid fa-heart">28</a></li>
+						<li><a href="#" class="icon solid fa-comment">128</a></li>
+					</ul>
+				</footer>
+			</article>
+
+		</div>
+
+		<!-- Footer -->
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+				<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<p class="copyright">&copy; Untitled. Design：<a href="http://html5up.net">HTML5 UP</a>. Images：<a href="http://unsplash.com">Unsplash</a>.</p>
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>
+
+

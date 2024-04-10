@@ -1,0 +1,387 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>JavaScript</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="single is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">艾登Blog</a></h1>
+			<nav class="links">
+				<ul>
+					<li><a href="html_css.html">HTML/CSS</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+					<li><a href="rwd.html">RWD</a></li>
+					<li><a href="jQuery.html">jQuery</a></li>
+					<li><a href="bootstrap.html">Bootstrap</a></li>
+					<li><a href="git.html">git</a></li>
+					<li><a href="angular.html">angular</a></li>
+				</ul>
+			</nav>
+			<nav class="main">
+				<ul>
+					<li class="search">
+						<a class="fa-search" href="#search">Search</a>
+						<form id="search" method="get" action="#">
+							<input type="text" name="query" placeholder="Search" />
+						</form>
+					</li>
+					<li class="menu">
+						<a class="fa-bars" href="#menu">Menu</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<section id="menu">
+
+			<!-- Search -->
+			<section>
+				<form class="search" method="get" action="#">
+					<input type="text" name="query" placeholder="Search" />
+				</form>
+			</section>
+
+			<!-- Links -->
+			<section>
+				<ul class="links">
+					<li>
+						<a href="html_css.html">
+							<h3>HTML/CSS</h3>
+						</a>
+					</li>
+					<li>
+						<a href="javascript.html">
+							<h3>JavaScript</h3>
+						</a>
+					</li>
+					<li>
+						<a href="rwd.html">
+							<h3>RWD</h3>
+						</a>
+					</li>
+					<li>
+						<a href="jQuery.html">
+							<h3>jQuery</h3>
+						</a>
+					</li>
+					<li>
+						<a href="bootstrap.html">
+							<h3>Bootstrap</h3>
+						</a>
+					</li>
+					<li>
+						<a href="git.html">
+							<h3>Git</h3>
+						</a>
+					</li>
+					<li>
+						<a href="angular.html">
+							<h3>angular</h3>
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Actions -->
+			<!-- <section>
+				<ul class="actions stacked">
+					<li><a href="#" class="button large fit">Log In</a></li>
+				</ul>
+			</section> -->
+
+		</section>
+
+		<!-- Main -->
+		<div id="main">
+			<!-- Post -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a href="#">JavaScript</a></h2>
+						<p>JavaScript隨手記</p>
+					</div>
+					<div class="meta">
+						<time class="published" datetime="2022-11-01">November 1, 2022</time>
+						<a href="#" class="author"><span class="name">Aiden</span><img src="images/head.jpg"
+								alt="" /></a>
+					</div>
+				</header>
+				<a href="https://overapi.com/jquery">javascript語法：</a>
+				<ul>
+					<li>指定ID：var element = document.getElementById('id'); // 可以將這段設為一個變數方便閱讀</li>
+					<li>修改內容：element.textContent('');</li>
+					<li>取得型態：element.type</li>
+					<li>取得值：element.value</li>
+					<li>設置/獲取元素內容：element.innerHTML = '...'; / var content = element.innerHTML;</li>
+					<li>新增節點：var newElement = document.createElement('em'); newElement.textContent = '這是新增的文本';</li>
+					<li>增加子結點：var parentElement = document.getElementById('parent'); parentElement.appendChild(newElement);</li>
+					<li>function宣告：
+						<textarea rows="6">function add(one, two){
+	var total = one + two;
+	console.log(total);
+	return total;
+}
+						</textarea>
+					</li>
+					<li>確認型態：var x = 5; console.log(typeof x); // 输出 "number"</li>
+					<li>單一選擇器：document.querySelector('.title a')</li>
+					<li>修改CSS樣式：document.querySelector('.rocket-1').style.bottom = '2000px';</li>
+					<li>字串轉數字：parseInt()</li>
+					<li>多選擇器：document.querySelectorAll('.title a')。(多筆資料會回傳陣列)</li>
+					<li>增加標籤屬性：.setAttribute('href','http:www.yahoo.com.tw')</li>
+					<li>取得標籤屬性：.getAttribute('href')</li>
+					<li>給預設值 -> ||：var data = JSON.parse(localStorage.getItem('listData')) || []</li>
+					<li>立即函式：(function (){ console.log('立即函式') } ())</li>
+					<li>可以查看object內建函式：var e = new String('字串');</li>
+					<li>a && b。若a為Truthy(真值)回傳b，若a是Falsy(假值)回傳a</li>
+					<li>a || b。若a為Truthy(真值)回傳a，若a是Falsy(假值)回傳b</li>
+					<li>了解一个對象包含哪些属性和方法：console.dir()</li>
+					<li>在將a變數賦值給b變數時，一般型別皆是傳值，僅有物件(object,array,function)是傳參考，意即a,b都參照同個目標，若任一變數進行異動，兩個變數的結果會是一樣的</li>
+					<li>淺層/深層複製：Object.assign()</li>
+					<li>map()：會將原陣列運算結果回傳回去</li>
+					<li>for (var key in person) {
+						console.log(`列舉${key}`);
+					}</li>
+				</ul>
+				<span>Array陣列</span>
+				<ul>
+					<li>宣告陣列：var cornField = [1,2,3]</li>
+					<li>增加陣列值：cornField.push(4)</li>
+					<li>刪除陣列值：cornField.splice(0,1)</li>
+					<li>修改陣列值：cornField[0] = 5</li>
+					<li>取得陣列長度：cornField.length</li>
+				</ul>
+				<span>Object物件</span>
+				<ul>
+					<li>Object宣告：
+						<textarea rows="5">var farm = {
+	farmer: "農場主人",
+	animals: ["牛", "羊"],
+	cow: 10,
+	sheep: 5,
+	goHome: function(){
+		console.log(farm.farmer + '，要回家了'); //農場主人，要回家了
+	}
+	countAnimal: function(){
+		var total = farm.cow + farm.sheep;
+		console.log(total); //15
+	}
+}
+						</textarea>
+					<li>取得物件值：farm.animals[0] / farm.cow / farm['sheep'] / farm.countAnimal() / farm['countAnimal']()
+					</li>
+					<li>新增物件值：farm.father = '農場爸爸' / farm['father'] = '農場爸爸'</li>
+					<li>刪除物件值：delete farm.father / deleta farm['father']</li>
+					<li>陣列內容為物件</li>
+					<textarea rows="5">var farms = [
+	{
+		farmer: "農場主人"
+	},
+	{
+		farmer: "農場主人2"
+	}
+]
+					</textarea>
+				</ul>
+				<span>switch
+					<ul>
+						<li>switch宣告</li>
+						<textarea rows="5">switch(color){
+	case 'red':
+		alert('這是紅色');
+		break;
+
+	case 'blue':
+		alert('這是藍色');
+		break;
+
+	default:
+		alert('沒有顏色');
+		break;
+}
+						</textarea>
+					</ul>
+				</span>
+				<span>for迴圈
+					<ul>
+						<li>for迴圈宣告</li>
+						<textarea rows="5">for(var i=0; i< 3; i++){
+	console.log(i);
+}
+						</textarea>
+					</ul>
+				</span>
+				<span>event事件
+					<ul>
+						<li>點擊事件(只會執行最後一個)：.onclick() = function(e){}</li>
+						<li>事件監聽：.addEventListener('click',function(e){},false)
+							<ol>參數：選擇事件,匿名function,false/true
+								<li>false(事件氣泡Event Bubbling:從指定元素往最外層)</li>
+								<li>true(事件捕捉Event Capturing:從最外層往內找指定元素)</li>
+								<li>終止冒泡事件：e.stopPropagation();</li>
+							</ol>
+							<ol>事件
+								<li>表單內容更動內容時觸發：change</li>
+								<li>按下鍵盤：keydown</li>
+								<li>所在焦點：focus</li>
+								<li>離開焦點：blur</li>
+								<li>當滑鼠滑入指定內容時觸發：mousemove</li>
+								<li></li>
+							</ol>
+						</li>
+						<li>取消元素的默認行為：e.preventDefault()</li>
+						<li>了解目前所在元素位置：e.target/e.target.nodeName</li>
+						<li>鍵盤代碼：e.keyCode</li>
+						<li>滑鼠位置(依裝置解析度：screen；依網頁本身：page；依瀏覽器視窗：client)
+							<ol>
+								<li>e.screenX</li>
+								<li>e.screenY</li>
+								<li>e.pageX</li>
+								<li>e.pageY</li>
+								<li>e.clientX</li>
+								<li>e.clientY</li>
+								<li>
+									.mouseImg { position:fixed }
+									el.addEventListener('mousemove', getPosition, false);
+									function getPosition(e){
+									var mouseImg = document.querySelector('.mouseImg');
+									mouseImg.style.top = e.clientY + 'px';
+									mouseImg.style.left = e.clientX + 'px';
+									}
+								</li>
+							</ol>
+						</li>
+					</ul>
+				</span>
+				<span>localStorage-瀏覽器資料儲存
+					<ul>
+						<li>localStorage僅能儲存sting資料</li>
+						<li>"儲存"localStorage key值：localStorage.setItem("myName",str)</li>
+						<li>"取得"localStorage key值：localStorage.getItem("myName")</li>
+						<li>將object轉換成sting：JSON.stingify(object)</li>
+						<li>取得轉換成sting的object值再轉回object：JSON.parse(localStorage.getItem("myName"))</li>
+					</ul>
+				</span>
+				<span>data-*屬性
+					<ul>
+						<li>透過data-*來增加自定義數據</li>
+						<li>
+							< div id="div1" data-id="id1" data-name="name1"></ div>
+						</li>
+						<li>js使用：let div = document.getElementById('div1');
+							let id = div.dataset.id;
+						</li>
+					</ul>
+				</span>
+				<span>瀏覽器功能簡介
+					<ul>
+						<li>上一頁：window.history.back()</li>
+						<li>下一頁：window.history.forward()</li>
+						<li>開啟列印：window.print()</li>
+						<li>另開視窗：window.open('http://')</li>
+						<li>瀏覽器視窗高度：window.innerHeight</li>
+						<li>瀏覽器整個高度：window.outerHeight</li>
+						<li>瀏覽器視窗改變時：window.onresize</li>
+					</ul>
+				</span>
+				<span>AJAX
+					<ul>
+						<li>建立變數：var element = new XMLHttpRequest();</li>
+						<li>取得狀態：element.readyState
+							<ol>
+								<li>0: 已產生一個XMLHttpRequest，但還沒連結資料</li>
+								<li>1: 使用了open()，但還沒傳送資料</li>
+								<li>2: 偵測到有用send</li>
+								<li>3: loading</li>
+								<li>4: 有撈到資料了，數據已經完全接受到</li>
+							</ol>
+						</li>
+						<li>開啟連結請求：element.open('GET','https',true)
+							<ol>
+								<li>.open變數(格式, 要讀取的網址, 同步非同步)</li>
+								<li>GET(讀取資料)、POST(傳送資料到伺服器)</li>
+								<li>同步非同步：true(非同步，不會等資料回傳，就讓程式繼續跑、false(同步，等資料回傳程式才會繼續跑)</li>
+							</ol>
+						</li>
+						<li>發送請求
+							<ol>
+								<li>GET：element.send()</li>
+								<li>POST：element.send('email=aiden@gmail.com&password=123456') (要傳遞的參數和參數值)</li>
+							</ol>
+						</li>
+						<li>取消請求：element.abort();</li>
+						<li>設定回應類型：element.responseType = 'json'; (default:text)</li>
+						<li>處理回應：element.onload = function() {
+							if (element.status >= 200 && element.status < 300) { // 請求成功，處理響應數據
+								console.log(element.response); } };</li>
+						<li><a
+								href="https://blog.miniasp.com/post/2009/01/16/Web-developer-should-know-about-HTTP-Status-Code">HTTP狀態碼</a>：element.status
+							(200至299的狀態碼範圍被認為是「成功」)</li>
+						<li><a href="https://www.test-cors.org/">偵測是否有開啟CORS</a>：該網域有開啟CORS，才能跨網域撈取資料</li>
+						<li>post前要宣告格式：element.setRequestHeader("Content-type","");
+							<ol>
+								<li>application/x-www-form-urlencoded</li>
+								<li>application/json</li>
+							</ol>
+						</li>
+					</ul>
+				</span>
+				<span>ES6語法
+					<ul>
+						<li>let：區域變數，離開該區域就不能使用</li>
+						<li>const：常數，宣告後就不能對其值進行異動</li>
+						<li>Template literals(輕鬆進行字串相加))：使用`我${var}`取代'我' + var +'歲'</li>
+					</ul>
+				</span>
+				<footer>
+					<ul class="stats">
+						<li><a href="#">JavaScript</a></li>
+						<li><a href="#" class="icon solid fa-heart">28</a></li>
+						<li><a href="#" class="icon solid fa-comment">128</a></li>
+					</ul>
+				</footer>
+			</article>
+
+		</div>
+
+		<!-- Footer -->
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+				<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<p class="copyright">&copy; Untitled. Design：<a href="http://html5up.net">HTML5 UP</a>. Images：<a
+					href="http://unsplash.com">Unsplash</a>.</p>
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

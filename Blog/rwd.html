@@ -1,0 +1,230 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+<head>
+	<title>RWD</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+<body class="single is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">艾登Blog</a></h1>
+			<nav class="links">
+				<ul>
+					<li><a href="html_css.html">HTML/CSS</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+					<li><a href="rwd.html">RWD</a></li>
+					<li><a href="jQuery.html">jQuery</a></li>
+					<li><a href="bootstrap.html">Bootstrap</a></li>
+					<li><a href="git.html">git</a></li>
+					<li><a href="angular.html">angular</a></li>
+				</ul>
+			</nav>
+			<nav class="main">
+				<ul>
+					<li class="search">
+						<a class="fa-search" href="#search">Search</a>
+						<form id="search" method="get" action="#">
+							<input type="text" name="query" placeholder="Search" />
+						</form>
+					</li>
+					<li class="menu">
+						<a class="fa-bars" href="#menu">Menu</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<section id="menu">
+
+			<!-- Search -->
+			<section>
+				<form class="search" method="get" action="#">
+					<input type="text" name="query" placeholder="Search" />
+				</form>
+			</section>
+
+			<!-- Links -->
+			<section>
+				<ul class="links">
+					<li>
+						<a href="html_css.html">
+							<h3>HTML/CSS</h3>
+						</a>
+					</li>
+					<li>
+						<a href="javascript.html">
+							<h3>JavaScript</h3>
+						</a>
+					</li>
+					<li>
+						<a href="rwd.html">
+							<h3>RWD</h3>
+						</a>
+					</li>
+					<li>
+						<a href="jQuery.html">
+							<h3>jQuery</h3>
+						</a>
+					</li>
+					<li>
+						<a href="bootstrap.html">
+							<h3>Bootstrap</h3>
+						</a>
+					</li>
+					<li>
+						<a href="git.html">
+							<h3>Git</h3>
+						</a>
+					</li>
+					<li>
+						<a href="angular.html">
+							<h3>angular</h3>
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Actions -->
+			<!-- <section>
+				<ul class="actions stacked">
+					<li><a href="#" class="button large fit">Log In</a></li>
+				</ul>
+			</section> -->
+
+		</section>
+
+		<!-- Main -->
+		<div id="main">
+			<!-- Post -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a href="#">RWD</a></h2>
+						<p>RWD隨手記</p>
+					</div>
+					<div class="meta">
+						<time class="published" datetime="2023-11-01">November 1, 2023</time>
+						<a href="#" class="author"><span class="name">Aiden</span><img src="images/head.jpg" alt="" /></a>
+					</div>
+				</header>
+				<span>RWD viewport指令：</span>
+				<ul>
+					<li>使用RWD時&lt;head&gt;內需加上：&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"/></li>
+					<li>畫面寬度：device-width</li>
+					<li>畫面高度：device-height</li>
+					<li>初始縮放比：initial-scale</li>
+					<li>最小可縮放比：minimum-scale</li>
+					<li>最大可縮放比：maximum-scale = 2.0 (最大兩倍)</li>
+					<li>使用者是否可縮放：user-scalable = no (否)</li>
+				</ul>
+				<span>CSS 3 Media Query：</span>
+				<ul>
+					<li>由大至小，當寬度在768px以下時(即符合最大寬度)title class內文字為藍色：@media(max-width:768px){ .title{color : blue;} }</li>
+					<li>由小至大，當寬度在768px以上時(即符合最小寬度)title class內文字為藍色：@media(min-width:768px){ .title{color : blue;} }</li>
+				</ul>
+				<span>Flex RWD 排版方式：</span>
+				<ul>
+					<li><a href="https://youtu.be/t13Fvg0_xHk">伸縮自如的 RWD 排版術(上)</a></li>
+					<li><a href="https://youtu.be/Du_N0Vyh-Q0">伸縮自如的 RWD 排版術(下)</a></li>
+				</ul>
+				<span>Float RWD 排版方式：</span>
+				<ul>
+					<li>三欄式流體設計</li>
+					<ol>
+						<li>.wrap { max-width: 1024px; } </li>
+						<li>.content li { width: 31.33333%; margin: 1% 0.5em; float: left;} </li>
+						<li>@media (max-width:768px) { .content li {width: 48%} }</li>
+						<li>@media (max-width:569px) { .content li {width: 98%} }</li>
+					</ol>
+					<li>左側選單固定、右側流體式設計</li>
+					<ol>
+						<li>.wrap { max-width: 1024px; } </li>
+						<li>.menu { width: 200px; float: left;} (固定寬度)</li>
+						<li>.content { margin-left: 200px;} (往左推menu的寬度)</li>
+					</ol>
+					<li>header橫式menu隱藏變漢堡選單</li>
+					<ol>
+						<li>html需有個隱藏選單</li>
+						<li>.header { position: relative; }</li>
+						<li>.menu { float: right; }，.menu li { float: left; }使選單並排</li>
+						<li>@media .menu { position: absolute; max-height: 0px; overflow: hidden;} 將原本選單設為絕對定位並隱藏</li>
+						<li>@media .menu { top: 81px; left: 0; right:0; transition: max-height 2.3s;} 將選單定位於header(80px+1px)下方，並使左右滿版，加上漸變特效</li>
+						<li>@media .menu li{ float: none;} 取消選單的並排</li>
+						<li>@media .showmenu{ display: block; float: right; } 使漢堡選單變區塊元素且靠右</li>
+						<li>js $('.showmenu').on('click',  function(e) { $('body').toggleClass('menu-show'); }); 點擊漢堡選單後在body加上menu-show的class</li>
+						<li>@media .menu-show .menu { max-height: 500px } 賦予選單高度即會出現</li>
+					</ol>
+				</ul>
+				<span>RWD 注意事項：</span>
+				<ul>
+					<li>不能有X軸bar：width改為max-width</li>
+					<li>善用百分比(xx.xxxxx%)：依據父元素max-width的百分比去自適應寬度</li>
+					<li>中文內文單行字元 30～40 會比較好閱讀，英文則是 32～80 個字元數</li>
+					<li>手指點選範圍高度約在44px</li>
+					<li>善用touch點擊事件</li>
+					<li><a href="http://viewportsizes.mattstow.com/">Viewport Sizes 服務網站</a></li>
+					<li>iPad:768px、iPhone:767px以下</li>
+					<li>使某div區塊(表格)產生X bar：overflow-x: auto;</li>
+					<li>input欄位小技巧，使用type="email","tel","number"，來設定手機鍵盤預設輸入方式</li>
+					<li>圖片顯示：max-width及width:100%，差異在width會隨著父元素去延展，而max-midth會保持原圖的大小</li>
+					<li>CSS reset建議增加：img{ max-width:100%; height: auto; }</li>
+					<li>若有使用到圖片的話，盡量選擇大一點的圖片(600px)，避免自適應時因為圖片太小放大糊掉的問題</li>
+					<li><a href="https://tinypng.com/">TinyPNG壓縮圖片</a></li>
+					<li>RWD最小寬度一定要兼容到320px，因為是全世界最小手機尺寸(iphone5)，大約20個字</li>
+				</ul>
+				<span>樣式及範例</span>
+				<ul>
+					<li><a href="https://purecss.io/">Pure.css樣式設計</a></li>
+					<li><a href="https://stuffandnonsense.co.uk/">一般選單範例</a></li>
+					<li><a href="https://skinnyties.com/">一列式設計</a></li>
+					<li><a href="https://www.japantimes.co.jp/">Off canvas 選單範例</a></li>
+					<li><a href="https://codepen.io/search/pens?q=responsive+menu">CodePen-Responsive menu</a></li>
+					<li><a href="https://codepen.io/search/pens?q=offcanvas+menu">CodePen-Offcanvas menu</a></li>
+				</ul>
+				<footer>
+					<ul class="stats">
+						<li><a href="#">RWD</a></li>
+						<li><a href="#" class="icon solid fa-heart">28</a></li>
+						<li><a href="#" class="icon solid fa-comment">128</a></li>
+					</ul>
+				</footer>
+			</article>
+
+		</div>
+
+		<!-- Footer -->
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+				<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<p class="copyright">&copy; Untitled. Design：<a href="http://html5up.net">HTML5 UP</a>. Images：<a href="http://unsplash.com">Unsplash</a>.</p>
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>
+ 

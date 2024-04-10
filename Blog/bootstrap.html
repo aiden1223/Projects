@@ -1,0 +1,226 @@
+<!DOCTYPE HTML>
+<!--
+	Future Imperfect by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+
+<head>
+	<title>Bootstrap</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+
+</head>
+
+<body class="single is-preload">
+
+	<!-- Wrapper -->
+	<div id="wrapper">
+
+		<!-- Header -->
+		<header id="header">
+			<h1><a href="index.html">艾登Blog</a></h1>
+			<nav class="links">
+				<ul>
+					<li><a href="html_css.html">HTML/CSS</a></li>
+					<li><a href="javascript.html">JavaScript</a></li>
+					<li><a href="rwd.html">RWD</a></li>
+					<li><a href="jQuery.html">jQuery</a></li>
+					<li><a href="bootstrap.html">Bootstrap</a></li>
+					<li><a href="git.html">git</a></li>
+					<li><a href="angular.html">angular</a></li>
+				</ul>
+			</nav>
+			<nav class="main">
+				<ul>
+					<li class="search">
+						<a class="fa-search" href="#search">Search</a>
+						<form id="search" method="get" action="#">
+							<input type="text" name="query" placeholder="Search" />
+						</form>
+					</li>
+					<li class="menu">
+						<a class="fa-bars" href="#menu">Menu</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Menu -->
+		<section id="menu">
+
+			<!-- Search -->
+			<section>
+				<form class="search" method="get" action="#">
+					<input type="text" name="query" placeholder="Search" />
+				</form>
+			</section>
+
+			<!-- Links -->
+			<section>
+				<ul class="links">
+					<li>
+						<a href="html_css.html">
+							<h3>HTML/CSS</h3>
+						</a>
+					</li>
+					<li>
+						<a href="javascript.html">
+							<h3>JavaScript</h3>
+						</a>
+					</li>
+					<li>
+						<a href="rwd.html">
+							<h3>RWD</h3>
+						</a>
+					</li>
+					<li>
+						<a href="jQuery.html">
+							<h3>jQuery</h3>
+						</a>
+					</li>
+					<li>
+						<a href="bootstrap.html">
+							<h3>Bootstrap</h3>
+						</a>
+					</li>
+					<li>
+						<a href="git.html">
+							<h3>Git</h3>
+						</a>
+					</li>
+					<li>
+						<a href="angular.html">
+							<h3>angular</h3>
+						</a>
+					</li>
+				</ul>
+			</section>
+
+			<!-- Actions -->
+			<!-- <section>
+				<ul class="actions stacked">
+					<li><a href="#" class="button large fit">Log In</a></li>
+				</ul>
+			</section> -->
+
+		</section>
+
+		<!-- Main -->
+		<div id="main">
+			<!-- Post -->
+			<article class="post">
+				<header>
+					<div class="title">
+						<h2><a href="#">Bootstrap</a></h2>
+						<p>Bootstrap隨手記</p>
+					</div>
+					<div class="meta">
+						<time class="published" datetime="2023-11-01">November 1, 2023</time>
+						<a href="#" class="author"><span class="name">Aiden</span><img src="images/head.jpg" alt="" /></a>
+					</div>
+				</header>
+				<a href="https://getbootstrap.com/docs/5.3/getting-started/introduction/">Bootstrap語法：</a>
+				<ul>
+					<li><a href="https://getbootstrap.com/docs/5.3/content/typography/#global-settings">文字與語意化</a>：</li>
+					<ol>
+						<li>
+							ul-li inline用法(ul class="list-inline"，li class="list-inline-item")
+						</li>
+						<li>
+							引用：blockquote class="blockquote"
+						</li>
+						<li>
+							描述型清單：dl-外框、dt-標題、dd-敘述，裁切標題...：class="text-truncate"
+						</li>
+						<li>
+							寬度100%：class="w-100"
+						</li>
+						<li>
+							依據內容寬度決定網格寬度：class="col-auto"
+						</li>
+						<li>
+							拿掉多餘gutter：class="no-gutters"
+						</li>
+						<li>
+							col間的排序：class="order-{1~12|first|last}"
+						</li>
+						<li>
+							col間的margin：class="mr-auto/ml-auto/offset-1~12"
+						</li>
+						<li><a href="https://getbootstrap.com/docs/5.3/utilities/flex/#media-object">Media-object</a>：像留言板留言那樣，圖片主旨內容
+						</li>
+						<li>
+							border圓角：class="rounded"；border圓型：class="rounded-circle"
+						</li>
+						<li><a href="https://getbootstrap.com/docs/5.3/components/close-button/">Close按鈕</a></li>
+						<li>同時有行內和區塊元素：class="d-inline-block"</li>
+						<li>自適應display：class="bg-info d-lg-inline-block d-sm-block d-none"</li>
+						<li>凍結元素在上面(滑動時)：class="position:sticky"</li>
+						<li>文字超出時變...：class="text-truncate"</li>
+						<li>alert關閉視窗：data-dismiss="alert" (在alert的x button屬性補上)</button></li>
+						<li>通知/徽章樣式：badge</li>
+					</ol>
+					<li><a href="https://getbootstrap.com/docs/5.3/content/images/">圖片與響應式</a>：</li>
+					<ol>
+						<li>
+							自適應縮放：img-fluid
+						</li>
+						<li>
+							清除浮動：clearfix。如果內層有使用float-right/left，記得外層div要加上
+						</li>
+						<li>
+							水平置中：物件加上mx-auto d-block或是外層div加上text-center
+						</li>
+					</ol>
+					<li><a href="https://getbootstrap.com/docs/5.3/content/tables/">表格基本架構說明</a>：</li>
+					<ol>
+						<li>
+							表格自適應縮放：table-responsive{-sm|-md|-lg|-xl|-xxl}。在table外的div加上
+						</li>
+						<li>
+							清除浮動：clearfix。如果內層有使用float-right/left，記得外層div要加上
+						</li>
+						<li>
+							水平置中：物件加上mx-auto d-block或是外層div加上text-center
+						</li>
+					</ol>
+				</ul>
+				<footer>
+					<ul class="stats">
+						<li><a href="#">Boostrap</a></li>
+						<li><a href="#" class="icon solid fa-heart">28</a></li>
+						<li><a href="#" class="icon solid fa-comment">128</a></li>
+					</ul>
+				</footer>
+			</article>
+
+		</div>
+
+		<!-- Footer -->
+		<section id="footer">
+			<ul class="icons">
+				<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+				<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+			</ul>
+			<p class="copyright">&copy; Untitled. Design：<a href="http://html5up.net">HTML5 UP</a>. Images：<a
+					href="http://unsplash.com">Unsplash</a>.</p>
+		</section>
+
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
